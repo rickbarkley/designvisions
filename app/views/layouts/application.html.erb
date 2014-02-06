@@ -7,7 +7,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <title><%= content_for?(:title) ? yield(:title) : "Mike Brown Architecture" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Design Visions" %></title>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     
@@ -51,7 +51,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">Mike Brown Architecture</a>
+    <a class="navbar-brand" href="/">Design Visions</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,12 +68,12 @@
     
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/contact">Contact</a></li>
-      <li><%= link_to "Website", "http://www.mikebrownarchitect.com" %></li> 
+      <li><%= link_to "Website", "http://www.designvisionsofaustin.com" %></li> 
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
 
-          <%#<%= bootstrap_flash %>
+          <%= bootstrap_flash %>
           <%= yield %>
 
     <%= render 'layouts/footer' %>
