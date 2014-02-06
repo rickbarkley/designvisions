@@ -130,6 +130,11 @@ $('#second').click(function(e){
       <%= image_tag(@plan.elevation.url(:full)) %>
       </div>
     </p>
+        <p>
+      <b>Broshure:</b>
+<center><p><b><%= link_to "Print Broshure Set", @plan.broshure.url, format: "pdf", :target => '_blank' %></b></p></center>
+
+</p>
 
 </div>
 

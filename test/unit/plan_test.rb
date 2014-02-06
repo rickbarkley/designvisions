@@ -36,6 +36,10 @@
 #  elevation_content_type :string(255)
 #  elevation_file_size    :integer
 #  elevation_updated_at   :datetime
+#  broshure_file_name     :string(255)
+#  broshure_content_type  :string(255)
+#  broshure_file_size     :integer
+#  broshure_updated_at    :datetime
 #
 
 require 'test_helper'
