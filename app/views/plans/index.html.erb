@@ -80,7 +80,7 @@ $( "#filter" ).click(function() {
                                         <p><%= f.label :casita_eq, "Casita" %>
                                         <%= f.select(:casita_eq, [['No', ''],['Yes', 'Yes']]) %></p> 
                                         <p><%= f.label :view_eq, "View" %></p>
-                                        <%= f.select(:view_eq, [['Front View', 'Front View'], ['Rear View', 'Rear View'],['Right View', 'Right View'],['Left View', 'Left View']],{ :prompt => "Not Sure"}) %>
+                                        <p><%= f.select(:view_eq, [['Front View', 'Front View'], ['Rear View', 'Rear View'],['Right View', 'Right View'],['Left View', 'Left View']],{ :prompt => "Not Sure"}) %></p>
                                         <p><%= f.label :name_cont, "Plan Name" %></p>
                                         <p><%= f.text_field :name_cont %></p> 
                                    
