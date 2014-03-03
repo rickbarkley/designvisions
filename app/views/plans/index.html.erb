@@ -82,7 +82,7 @@ $( "#filter" ).click(function() {
                                         <p><%= f.label :width_lteq, "Width Max" %></p>
                                         <p><%= f.text_field :width_lteq %></p> 
                                         <p><%= f.label :depth_lteq, "Depth Max" %></p>
-                                        <p><%= f.text_field :depth_lteq %></p> 
+                                        <p><%= f.text_field :depth_lteq.to_f %></p> 
                                         <p><%= f.label :name_cont, "Search for Plan" %></p>
                                         <p><%= f.text_field :name_cont %></p> 
                                    
