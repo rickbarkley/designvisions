@@ -68,7 +68,7 @@ $( "#filter" ).click(function() {
                         </div>
 
                             <div id="filter">
-                                <div class="btn btn-primary">More Options</div><br />
+                                <div class="btn btn-primary">Toggle More Options</div><br />
                                 </div>
                                 <div id="filter-search">
                                     <p><%= f.label :suite_eq, "Owners' Suite" %>
@@ -78,12 +78,10 @@ $( "#filter" ).click(function() {
                                         <p><%= f.label :study_eq, "Study" %>
                                         <%= f.select(:study_eq, [['No', ''],['Yes', 'Yes']]) %></p>
                                         <p><%= f.label :casita_eq, "Casita" %>
-                                        <%= f.select(:casita_eq, [['No', ''],['Yes', 'Yes']]) %></p>
-                                        <p><%= f.label :width_lteq, "Width Max" %></p>
-                                        <p><%= f.text_field :width_lteq %></p> 
-                                        <p><%= f.label :depth_lteq, "Depth Max" %></p>
-                                        <p><%= f.text_field :depth_lteq.to_f %></p> 
-                                        <p><%= f.label :name_cont, "Search for Plan" %></p>
+                                        <%= f.select(:casita_eq, [['No', ''],['Yes', 'Yes']]) %></p> 
+                                        <p><%= f.label :view_eq, "View" %></p>
+                                        <%= f.select(:view_eq, [['Front View', 'Front View'], ['Rear View', 'Rear View'],['Right View', 'Right View'],['Left View', 'Left View']],{ :prompt => "Not Sure"}) %>
+                                        <p><%= f.label :name_cont, "Plan Name" %></p>
                                         <p><%= f.text_field :name_cont %></p> 
                                    
                                 </div>
