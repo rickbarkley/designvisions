@@ -71,7 +71,7 @@ $( "#filter" ).click(function() {
                                 <div class="btn btn-primary">Toggle More Options</div><br />
                                 </div>
                                 <div id="filter-search">
-                                    <p><%= f.label :suite_eq, "Owners' Suite" %>
+                                    <br /><p><%= f.label :suite_eq, "Owners' Suite" %>
                                     <%= f.select(:suite_eq, [['Not Sure', ''],['Primary Level', 1],['Secondary Level', 2]]) %></p>
                                         <p><%= f.label :media_string_eq, "Media Room" %>
                                         <%= f.select(:media_string_eq, [['No', ''],['Yes', 'Yes']]) %>
