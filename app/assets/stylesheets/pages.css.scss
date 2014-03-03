@@ -12,6 +12,44 @@
 .searh-form .select {
 	width: 5em;
 }
+#side-text {
+	background:url(overlay.png) repeat;
+background-size: cover;
+	color: #fff;
+	height: 100%;
+	padding:30px;
+	margin:20px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+
+	border-radius:10px;
+
+}
+header {
+	margin-bottom:20px;
+	height: 100%;
+}
+
+#side-text p {
+
+  font-size:175%;
+  line-height: 1.5em;
+  font-family: "CrimsonRoman", "Times New Roman", Georgia, serif;
+
+  }
+
+#side-text li {
+	font-size:100%;
+	line-height: 1.5em;
+   font-family: "CrimsonRoman", "Times New Roman", Georgia, serif;
+}
+side-text
+
+#side-text img {
+
+	border-radius: 10px;
+	text-align:center;
+}
 .popular {
 
 display: block;

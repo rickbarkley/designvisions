@@ -7,6 +7,7 @@ Mbrown::Application.routes.draw do
 
   get "pages/about"
 
+
   resources :plans
   match '/contact', :to => 'pages#contact'
     
@@ -14,7 +15,11 @@ Mbrown::Application.routes.draw do
     root :to => 'plans#index'
   end
 
-  root :to => "pages#home"
+  #root :to => 'devise#registrations'
+
+  devise_scope :user do
+  root to: "devise/sessions#new"
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
