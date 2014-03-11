@@ -45,9 +45,19 @@
 class Plan < ActiveRecord::Base
   attr_accessible :bathrooms, :bedrooms, :drawing_1, :drawing_2, :elevation, :drawing_1_file_name, :drawing_1_content_type, :drawing_1_file_size, :drawing_1_updated_at, 
   				:casita, :court, :depth, :dining, :garage, :garage_loc, :half_bath, :levels, :living, :media_string, :name, :sqfoot, :study, :style, :suite, :view, :width,
-  				:broshure_file_name, :broshure_content_type, :broshure_file_size, :broshure_updated_at, :broshure  
+  				:broshure_file_name, :broshure_content_type, :broshure_file_size, :broshure_updated_at, :broshured  
   has_attached_file :drawing_1,  :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
   has_attached_file :drawing_2,  :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
   has_attached_file :elevation,  :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
   has_attached_file :broshure 
+
+  has_many :users, through: :saved_plans
+  has_many :saved_plans, :dependent => :destroy
+  accepts_nested_attributes_for :saved_plans
+
+      def accessible_to_user_by_saved?(user)
+        #Look for course enrollments that belong to given user and have not expired
+       saved_plans = self.saved_plans.where("user_id = ?", user.id)
+       !saved_plans.blank? # Returns true if there is at least one registration found, otherwise returns false
+    end
 end

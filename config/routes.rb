@@ -6,9 +6,13 @@ Mbrown::Application.routes.draw do
   get "pages/contact"
 
   get "pages/about"
+ resources :users 
+resources :saved_plans
 
+  resources :plans do
+    resources :saved_plans
+  end
 
-  resources :plans
   match '/contact', :to => 'pages#contact'
     
     authenticated :user do
