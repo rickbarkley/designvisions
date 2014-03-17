@@ -5,7 +5,7 @@
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
         <%= devise_error_messages! %>
         <div><p><%= f.label :name %></p>
-          <P><%= f.email_field :name, :autofocus => true %></p></div>
+          <P><%= f.text_field :name, :autofocus => true %></p></div>
 
         <div><%= f.label :email %><br />
         <%= f.email_field :email, :autofocus => true %></div>
