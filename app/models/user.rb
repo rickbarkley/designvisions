@@ -27,6 +27,7 @@ class User < ActiveRecord::Base
   has_many :saved_plans, :dependent => :destroy
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :role_ids, :as => :admin
+  attr_accessible :email, :name, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 end

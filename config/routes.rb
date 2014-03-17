@@ -25,6 +25,10 @@ resources :saved_plans
   root to: "devise/sessions#new"
 end
 
+namespace :admin do
+    resources :users # Have the admin manage them here.
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
