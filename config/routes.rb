@@ -7,6 +7,7 @@ Mbrown::Application.routes.draw do
 
   get "pages/about"
  resources :users 
+ resources :devise
 resources :saved_plans
 
   resources :plans do
