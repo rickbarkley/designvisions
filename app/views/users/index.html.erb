@@ -38,7 +38,7 @@
         <%= render user %>
       </td>
       <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-primary') unless user == current_user %></td>
-<td><%= link_to "Edit User", edit_registration_path(resource_name), class: "btn btn-primary" %></td>
+<td><%#<%= link_to "Edit User", edit_registration_path(resource_name), class: "btn btn-primary" %></td>
     </tr>
   <% end %>
   </tbody>
