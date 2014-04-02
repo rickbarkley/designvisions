@@ -111,16 +111,16 @@
   </div>
   <div class="field">
     <%= f.label :image, "Image (portfolio index pic)" %><br>
-<% if f.object.new_record? | @portfolio.image.blank? %>
+<%#<% if f.object.new_record? | @portfolio.image.blank? %>
 <%= f.file_field :image %>
-<% else %>
-<%= f.file_field :image %>
-      <%= link_to File.basename(f.object.image.url), f.object.image.url %>
-        <% end %>
+<%#<% else %>
+<%#<%= f.file_field :image %>
+      <%#<%= link_to File.basename(f.object.image.url), f.object.image.url %>
+        <%#<% end %>
   </div>
   <div class="field">
     <%= f.label :image2, "Image 2" %><br>
-<% if f.object.new_record? | @portfolio.image2.blank? %>
+<% if f.object.new_record? %>
 <%= f.file_field :image2 %>
 <% else %>
 <%= f.file_field :image2 %>
