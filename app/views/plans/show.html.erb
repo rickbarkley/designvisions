@@ -34,6 +34,99 @@ $('#second').click(function(e){
 
 
 });
+
+  $('#image').click(function(e){
+    e.preventDefault();
+    $('#picture').html($('#image').html());
+    $('#picture').show("fast");
+});
+
+$('#image2').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image2').html());
+    $('#picture').show("fast");
+
+
+});
+
+$('#image3').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image3').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image4').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image4').html());
+    $('#picture').show("fast");
+
+
+});
+
+$('#image5').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image5').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image6').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image6').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image7').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image7').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image8').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image8').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image9').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image9').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image10').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image10').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image11').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image11').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image12').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image12').html());
+    $('#picture').show("fast");
+
+
+});
+$('#image11').click(function(e){
+  e.preventDefault();
+    $('#picture').html($('#image11').html());
+    $('#picture').show("fast");
+
+
+});
   });
 
 
@@ -42,6 +135,58 @@ $('#second').click(function(e){
 $(document).ready(function() {
   $('#picture').click
 
+</script>
+<script>
+$(document).ready(function() {
+$( ".up" ).click(function() {
+  $( "#firstgroup" ).toggle( "fast") 
+  $("#secondgroup").toggle("fast")
+   $("#secondgroup_icon").toggle("fast")
+  $("#firstgroup_icon").toggle("fast")
+  $("#down1_icon").toggle("fast")
+  $("#down2_icon").toggle("fast")
+
+
+  });
+$( ".down" ).click(function() {
+  $( "#firstgroup" ).toggle( "fast") 
+  $("#secondgroup").toggle("fast")
+  $("#down1_icon").toggle("fast")
+  $("#down2_icon").toggle("fast")
+  $("#firstgroup_icon").toggle("fast")
+  $("#secondgroup_icon").toggle("fast")
+  
+
+  });
+$( ".down2" ).click(function() {
+  $( "#secondgroup" ).toggle( "fast") 
+  $("#thirdgroup").toggle("fast")
+  $("#down3_icon").toggle("fast")
+  $("#down2_icon").toggle("fast")
+  $( "#secondgroup_icon" ).toggle( "fast") 
+  $("#thirdgroup_icon").toggle("fast")
+
+  });
+$( ".up2" ).click(function() {
+  $( "#secondgroup" ).toggle( "fast") 
+  $("#thirdgroup").toggle("fast")
+  $( "#secondgroup_icon" ).toggle( "fast") 
+  $("#thirdgroup_icon").toggle("fast")
+  $("#down3_icon").toggle("fast")
+  $("#down2_icon").toggle("fast")
+
+  });
+$( ".down3" ).click(function() {
+  $( "#thirdgroup" ).toggle( "fast") 
+  $("#fourthgroup").toggle("fast")
+
+  });
+$( ".up3" ).click(function() {
+  $( "#fourthgroup" ).toggle( "fast") 
+  $("#thirdgroup").toggle("fast")
+
+  });
+});
 </script>
 
 <p id="notice"><%= notice %></p>
@@ -52,70 +197,77 @@ $(document).ready(function() {
 <div id="picture">
 <center><%= link_to image_tag(@plan.drawing_1.url(:full)), new_plan_saved_plan_path(@plan) %></center>
 </div>
+<center>
 <br /><br />
-<br />
+
+    <% unless @plan.name.blank? %>
+    <p>
+      <b>Name:</b>
+      <%= @plan.name %> |
+
+    <% end %>
+
+      <b>Sqfoot:</b>
+      <%= @plan.sqfoot %> |
+
+      <b>Bedrooms:</b>
+      <%= @plan.bedrooms %> |
+
+      <b>Bathrooms:</b>
+      <%= @plan.bathrooms %> |
+
+      <% unless @plan.half_bath.blank? %>
+
+      <b>Half bath:</b>
+      <%= @plan.half_bath %> 
+
+      <% end %>
+
+    <p>
+      <b>Living:</b>
+      <%= @plan.living %> |
+
+      <b>Dining:</b>
+      <%= @plan.dining %> |
+
+      <b>Levels:</b>
+      <%= @plan.stories %>
+
+    <% unless @plan.view.blank? %>
+
+      <b>View:</b>
+      <%= @plan.view %> |
+
+    <% end %>
+    <% unless @plan.width.blank? %>
+
+      <b>Width:</b>
+      <%= @plan.width %> |
+
+    <% end %>
+    <% unless @plan.depth.blank? %>
+
+      <b>Depth:</b>
+      <%= @plan.depth %> 
+
+    <% end %>
+
+  </center>
+    
+    </p><br />
+    <center><p><b><%= link_to "Print Brochure Set", @plan.broshure.url, class: "btn btn-primary", format: "pdf", :target => '_blank' %></b></p><br /></center>
 
 
   </div>
   
 
 <div class="well col-md-2">
-  
-    <% unless @plan.name.blank? %>
-    <p>
-      <b>Name:</b>
-      <%= @plan.name %>
-    </p>
-    <% end %>
-    <p>
-      <b>Sqfoot:</b>
-      <%= @plan.sqfoot %>
-    </p>
-    <p>
-      <b>Bedrooms:</b>
-      <%= @plan.bedrooms %>
-    </p>
-    <p>
-      <b>Bathrooms:</b>
-      <%= @plan.bathrooms %>
-    </p>
-      <% unless @plan.half_bath.blank? %>
-    <p>
-      <b>Half bath:</b>
-      <%= @plan.half_bath %>
-    </p>
-      <% end %>
-
-    <p>
-      <b>Living:</b>
-      <%= @plan.living %>
-    </p>
-    <p>
-      <b>Dining:</b>
-      <%= @plan.dining %>
-    </p>
-    <p>
-      <b>Levels:</b>
-      <%= @plan.levels %>
-    </p>
-    <% unless @plan.view.blank? %>
-    <p>
-      <b>View:</b>
-      <%= @plan.view %>
-    </p>
-    <% end %>
-    <% unless @plan.width.blank? %>
-    <p>
-      <b>Width:</b>
-      <%= @plan.width %>
-    </p>
-    <% end %>
-    <% unless @plan.depth.blank? %>
-    <p>
-      <b>Depth:</b>
-      <%= @plan.depth %>
-    </p>
-    <% end %>
+  <div id="slide_icons_up">
+    <icon id="firstgroup_icon" class="up-max-icon fa fa-chevron-up"></icon>
+    <icon id="secondgroup_icon" class="up fa fa-chevron-up"></icon>
+    <icon id="thirdgroup_icon" class="up2 fa fa-chevron-up"></icon>
+  </div>
+    <div id="firstgroup">
     <div id="first">
     <p><%= link_to image_tag(@plan.drawing_1.url(:full)), new_plan_saved_plan_path(@plan) %></p>
   </div>
@@ -135,9 +287,65 @@ $(document).ready(function() {
       <%= link_to image_tag(@plan.elevation.url(:full)), new_plan_saved_plan_path(@plan) %>
       </div>
     </p>
-        <p>
+    
+  <pic id="image">
+    <%= image_tag(@portfolio.image.url) %>
+  </pic>
+</div>
+<div id="secondgroup">
+  <pic id="image2">
+      <%= image_tag(@portfolio.image2.url) %>
+  </pic>
 
+  <pic id="image3">
+    <%= image_tag(@portfolio.image3.url) %> 
+  </pic>
+
+  <pic id="image4">
+    <%= image_tag(@portfolio.image4.url) %>
+  </pic>
+  </div>
+  
+  <pic id="image5">
+  <%= image_tag(@portfolio.image5.url) %>
+</pic>
+</div>
+<div id="thirdgroup">
+  <pic id="image6">
+  <%= image_tag(@portfolio.image6.url) %>
+</pic>
+<pic id="image7">
+  <%= image_tag(@portfolio.image7.url) %>
+</pic>
+
+<pic id="image8">
+  <%= image_tag(@portfolio.image8.url) %>
+</pic>
+</div>
+
+<pic id="image9">
+  <%= image_tag(@portfolio.image9.url) %>
+</pic>
+</div>
+<div id="fourthgroup">
+<pic id="image10">
+  <%= image_tag(@portfolio.image10.url) %>
+</pic>
+<pic id="image11">
+  <%= image_tag(@portfolio.image11.url) %>
+</pic>
+<pic id="image12">
+  <%= image_tag(@portfolio.image12.url) %>
+</pic>
 <center><p><b><%= link_to "Print Brochure Set", @plan.broshure.url, class: "btn btn-primary", format: "pdf", :target => '_blank' %></b></p></center>
+</div>
+<div id="slide_icons_down">
+    <icon id="down1_icon" class="down fa fa-chevron-down"></icon>
+    <icon id="down2_icon" class="down2 fa fa-chevron-down"></icon>
+    <icon id="down3_icon" class="down_max fa fa-chevron-down"></icon>
+  </div>
+</div>
+
 
 <% if user_signed_in? %>
 <% if @plan.accessible_to_user_by_saved?(current_user) %>
