@@ -63,20 +63,6 @@ class Plan < ActiveRecord::Base
   has_attached_file :elevation,  :styles => { :full => ["2400x2400>", :jpg], :preview => ["365x365>", :jpg], :thumb => ["150x150>", :jpg] }
   has_attached_file :broshure 
 
-  mount_uploader :image, PortfolioUploader
-  mount_uploader :image2, PortfolioUploader   
-  mount_uploader :image3, PortfolioUploader  
-  mount_uploader :image4, PortfolioUploader  
-  mount_uploader :image5, PortfolioUploader 
-  mount_uploader :image6, PortfolioUploader
-  mount_uploader :image7, PortfolioUploader 
-  mount_uploader :image8, PortfolioUploader 
-  mount_uploader :image9, PortfolioUploader 
-  mount_uploader :image10, PortfolioUploader 
-  mount_uploader :image11, PortfolioUploader
-  mount_uploader :image12, PortfolioUploader
-
-
   has_many :users, through: :saved_plans
   has_many :saved_plans, :dependent => :destroy
   accepts_nested_attributes_for :saved_plans
