@@ -111,7 +111,7 @@
   </div>
   <div class="field">
     <%= f.label :image, "Image" %><br>
-<% if f.object.new_record? | @portfolio.image.blank? %>
+<% if f.object.new_record? %><%#| @portfolio.image.blank? %>
 <%= f.file_field :image %>
 <% else %>
 <%= f.file_field :image %>
