@@ -271,9 +271,11 @@ $( ".up3" ).click(function() {
 
 <div class="well col-md-2">
   <div id="slide_icons_up">
+    <center>
     <icon id="firstgroup_icon" class="up-max-icon fa fa-chevron-up"></icon>
     <icon id="secondgroup_icon" class="up fa fa-chevron-up"></icon>
     <icon id="thirdgroup_icon" class="up2 fa fa-chevron-up"></icon>
+  </center>
   </div>
     <div id="firstgroup">
     <div id="first">
@@ -358,9 +360,19 @@ $( ".up3" ).click(function() {
     </b><br /><br /></center>
 </div>
 <div id="slide_icons_down">
-    <icon id="down1_icon" class="down fa fa-chevron-down"></icon>
-    <icon id="down2_icon" class="down2 fa fa-chevron-down"></icon>
+  <center>
+    <% if @plan.image2.blank? %>
     <icon id="down3_icon" class="down_max fa fa-chevron-down"></icon>
+    <% else %>
+    <icon id="down1_icon" class="down fa fa-chevron-down"></icon>
+    <% end %>
+    <% if @plan.image6.blank? %>
+    <icon id="down3_icon" class="down_max fa fa-chevron-down"></icon>
+    <% else %>
+    <icon id="down2_icon" class="down2 fa fa-chevron-down"></icon>
+    <% end %>
+    <icon id="down3_icon" class="down_max fa fa-chevron-down"></icon>
+  </center>
   </div>
 </div>
 
