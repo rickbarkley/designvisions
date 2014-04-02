@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140317172354) do
+ActiveRecord::Schema.define(:version => 20140402140755) do
 
   create_table "plans", :force => true do |t|
     t.integer  "bedrooms"
@@ -51,6 +51,18 @@ ActiveRecord::Schema.define(:version => 20140317172354) do
     t.string   "broshure_content_type"
     t.integer  "broshure_file_size"
     t.datetime "broshure_updated_at"
+    t.string   "image"
+    t.string   "image2"
+    t.string   "image3"
+    t.string   "image4"
+    t.string   "image5"
+    t.string   "image6"
+    t.string   "image7"
+    t.string   "image8"
+    t.string   "image9"
+    t.string   "image10"
+    t.string   "image11"
+    t.string   "image12"
   end
 
   create_table "roles", :force => true do |t|

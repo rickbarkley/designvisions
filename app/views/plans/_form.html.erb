@@ -109,6 +109,116 @@
      <%= f.label :broshure, "Upload Broshure PDF", :class => 'control-label' %>
 <%= f.file_field :broshure %>
   </div>
+  <div class="field">
+    <%= f.label :image, "Image (portfolio index pic)" %><br>
+<% if f.object.new_record? | @portfolio.image.blank? %>
+<%= f.file_field :image %>
+<% else %>
+<%= f.file_field :image %>
+      <%= link_to File.basename(f.object.image.url), f.object.image.url %>
+        <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image2, "Image 2" %><br>
+<% if f.object.new_record? | @portfolio.image2.blank? %>
+<%= f.file_field :image2 %>
+<% else %>
+<%= f.file_field :image2 %>
+      <%= link_to File.basename(f.object.image2.url), f.object.image2.url %>
+        <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image3, "Image 3" %><br>
+<% if f.object.new_record? | @portfolio.image3.blank? %>
+<%= f.file_field :image3 %>
+<% else %>
+<%= f.file_field :image3 %>
+      <%= link_to File.basename(f.object.image3.url), f.object.image3.url %>
+        <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image4, "Image 4" %><br>
+<% if f.object.new_record? | @portfolio.image4.blank? %>
+<%= f.file_field :image4 %>
+<% else %>
+<%= f.file_field :image4 %>
+      <%= link_to File.basename(f.object.image4.url), f.object.image4.url %>
+        <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image5, "Image 5" %><br>
+<% if f.object.new_record? | @portfolio.image5.blank? %>
+<%= f.file_field :image5 %>
+<% else %>
+<%= f.file_field :image5 %>
+      <%= link_to File.basename(f.object.image5.url), f.object.image5.url %>
+        <% end %>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="field">
+    <%= f.label :image6, "Image 6" %><br>
+<% if f.object.new_record? | @portfolio.image6.blank? %>
+<%= f.file_field :image6 %>
+<% else %>
+<%= f.file_field :image6 %>
+      <%= link_to File.basename(f.object.image6.url), f.object.image6.url %>
+        <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image7, "Image 7" %><br>
+<% if f.object.new_record? | @portfolio.image7.blank? %>
+<%= f.file_field :image8 %>
+<% else %>
+<%= f.file_field :image8 %>
+      <%= link_to File.basename(f.object.image7.url), f.object.image7.url %>
+        <% end %>
+  </div>
+    <div class="field">
+    <%= f.label :image7, "Image 8" %><br>
+<% if f.object.new_record? | @portfolio.image7.blank? %>
+<%= f.file_field :image7 %>
+<% else %>
+<%= f.file_field :image7 %>
+      <%= link_to File.basename(f.object.image7.url), f.object.image7.url %>
+        <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image9, "Image 9" %><br>
+<% if f.object.new_record? | @portfolio.image9.blank? %>
+<%= f.file_field :image9 %>
+<% else %>
+<%= f.file_field :image9 %>
+      <%= link_to File.basename(f.object.image9.url), f.object.image9.url %>
+        <% end %>
+  </div>
+    <div class="field">
+    <%= f.label :image10, "Image 10" %><br>
+<% if f.object.new_record? | @portfolio.image10.blank? %>
+<%= f.file_field :image10 %>
+<% else %>
+<%= f.file_field :image10 %>
+      <%= link_to File.basename(f.object.image10.url), f.object.image10.url %>
+        <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image11, "Image 11" %><br>
+<% if f.object.new_record? | @portfolio.image11.blank? %>
+<%= f.file_field :image11 %>
+<% else %>
+<%= f.file_field :image11 %>
+      <%= link_to File.basename(f.object.image11.url), f.object.image11.url %>
+        <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image12, "Image 12" %><br>
+<% if f.object.new_record? | @portfolio.image12.blank? %>
+<%= f.file_field :image12 %>
+<% else %>
+<%= f.file_field :image12 %>
+      <%= link_to File.basename(f.object.image12.url), f.object.image12.url %>
+        <% end %>
+  </div>
   <div class="actions">
     <%= f.submit class: "btn btn-large btn-primary" %>
   </div>
