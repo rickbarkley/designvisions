@@ -7,6 +7,7 @@
   <tr>
 
     <th>Plan</th>
+    <th>Plan Name</th>
     <th>User</th>
 
 
@@ -16,6 +17,7 @@
   <tr>
 
     <td><%= saved_plan.plan_id %></td>
+    <td><%= link_to saved_plan.plan.name, saved_plan.plan %></td>
     <td><%= saved_plan.user_email %></td>
 
   </tr>

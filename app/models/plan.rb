@@ -40,6 +40,18 @@
 #  broshure_content_type  :string(255)
 #  broshure_file_size     :integer
 #  broshure_updated_at    :datetime
+#  image                  :string(255)
+#  image2                 :string(255)
+#  image3                 :string(255)
+#  image4                 :string(255)
+#  image5                 :string(255)
+#  image6                 :string(255)
+#  image7                 :string(255)
+#  image8                 :string(255)
+#  image9                 :string(255)
+#  image10                :string(255)
+#  image11                :string(255)
+#  image12                :string(255)
 #
 
 class Plan < ActiveRecord::Base
