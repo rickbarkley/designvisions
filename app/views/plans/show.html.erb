@@ -255,7 +255,13 @@ $( ".up3" ).click(function() {
   </center>
     
     </p><br />
-    <center><p><b><%= link_to "Print Brochure Set", @plan.broshure.url, class: "btn btn-primary", format: "pdf", :target => '_blank' %></b></p><br /></center>
+    <% if user_signed_in? %>
+<% if @plan.accessible_to_user_by_saved?(current_user) %>
+<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %><br /></center>
+<% else %>
+<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %><br /></center>
+<% end %>
+<% end %>
 
 
   </div>
@@ -337,7 +343,13 @@ $( ".up3" ).click(function() {
 <pic id="image12">
   <%= image_tag(@plan.image12) %>
 </pic>
-<center><p><b><%= link_to "Print Brochure Set", @plan.broshure.url, class: "btn btn-primary", format: "pdf", :target => '_blank' %></b></p></center>
+<% if user_signed_in? %>
+<% if @plan.accessible_to_user_by_saved?(current_user) %>
+<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<% else %>
+<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
+<% end %>
+<% end %>
 </div>
 <div id="slide_icons_down">
     <icon id="down1_icon" class="down fa fa-chevron-down"></icon>
@@ -347,15 +359,6 @@ $( ".up3" ).click(function() {
 </div>
 
 
-<% if user_signed_in? %>
-<% if @plan.accessible_to_user_by_saved?(current_user) %>
-<center><%= link_to "More Info", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
-<% else %>
-<center><%= link_to "More Info & Save Plan", new_plan_saved_plan_path(@plan), class: "btn btn-primary" %></center>
-<% end %>
-<% end %>
-
-</p>
 
 </div>
 
