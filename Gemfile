@@ -17,6 +17,7 @@ gem "will_paginate", "~> 3.0.4"
 gem "font-awesome-rails"
 gem "fog"
 gem "simple_form"
+gem 'carrierwave'
 
 
 # Gems used only for assets and not required
