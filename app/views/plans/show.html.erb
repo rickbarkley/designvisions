@@ -277,6 +277,7 @@ $( ".up3" ).click(function() {
     <icon id="thirdgroup_icon" class="up2 fa fa-chevron-up"></icon>
   </center>
   </div>
+    <div id="slides">
     <div id="firstgroup">
     <div id="first">
     <p><%= link_to image_tag(@plan.drawing_1.url(:full)), new_plan_saved_plan_path(@plan) %></p>
@@ -358,6 +359,7 @@ $( ".up3" ).click(function() {
     <center><b><%= link_to "Print Brochure Set", @plan.broshure.url, class: "btn btn-primary", format: "pdf", :target => '_blank' %>
 
     </b><br /><br /></center>
+</div>
 </div>
 <div id="slide_icons_down">
   <center>
