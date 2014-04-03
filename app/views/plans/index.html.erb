@@ -139,7 +139,7 @@ if(screen.width >= 480){
 
 
     <% @plans.each do |plan| %>
-<div id="image" class="col-md-6">   
+<div id="image_index" class="col-md-6">   
 <center><%= link_to image_tag(plan.drawing_1.url(:full)), plan_path(plan) %></center>
 <dl class="dl-vertical"><center>
     <p>
