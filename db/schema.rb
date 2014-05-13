@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140402140755) do
+ActiveRecord::Schema.define(:version => 20140513180742) do
 
   create_table "plans", :force => true do |t|
     t.integer  "bedrooms"
@@ -26,15 +26,15 @@ ActiveRecord::Schema.define(:version => 20140402140755) do
     t.string   "view"
     t.integer  "garage"
     t.string   "garage_loc"
-    t.string   "width"
-    t.string   "depth"
+    t.integer  "width",                  :limit => 255
+    t.integer  "depth",                  :limit => 255
     t.string   "casita"
     t.string   "court"
     t.string   "study"
     t.string   "style"
     t.string   "media_string"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "drawing_1_file_name"
     t.string   "drawing_1_content_type"
     t.integer  "drawing_1_file_size"
